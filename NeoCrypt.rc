@@ -1,0 +1,300 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "include\resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "include\\resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\NeoCrypt.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\NeoCrypt.ico"
+
+IDI_ICON1               ICON                    "res\\CLSDFOLD.ICO"
+
+IDI_ICON2               ICON                    "res\\CLIP04.ICO"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 98
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About NeoCrypt"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "NeoCrypt Version 1.4\nVisit: https://neocrypt.sourceforge.net/",IDC_ABOUT_HEADER,40,7,128,18,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2003-2024 Arijit De.\n\nThis software is freeware and distributed under the terms of the GNU General Public License. Please view the accompanying License.txt file for more information.\n\nUses the cryptlib Security Toolkit.",IDC_STATIC,7,30,221,61,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_NEOCRYPT_DIALOG DIALOGEX 0, 0, 297, 337
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+CAPTION "NeoCrypt"
+MENU IDR_MENU1
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Select Files/Directories",IDC_STATIC,10,42,277,121
+    CONTROL         "",IDC_LV_FILE,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,18,54,260,78,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "Add File",IDC_BUT_ADDFILE,17,140,54,14
+    PUSHBUTTON      "Add Directory",IDC_BUT_ADDDIR,80,140,60,14
+    PUSHBUTTON      "Remove Sel",IDC_BUT_REMOVE,149,140,60,14
+    PUSHBUTTON      "Clear List",IDC_BUT_CLEAR,218,140,60,14
+    GROUPBOX        "Passwords",IDC_STATIC,10,167,142,70
+    LISTBOX         IDC_LIST_PWD,18,180,126,30,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_PWD_ADD,17,216,28,14
+    PUSHBUTTON      "Rem",IDC_PWD_SUB,49,216,28,14
+    PUSHBUTTON      "Upload",IDC_PWD_UPLOAD,81,216,30,14
+    PUSHBUTTON      "Clear",IDC_PWD_CLEAR,115,216,30,14
+    GROUPBOX        "Algorithm",IDC_STATIC,160,167,127,70
+    COMBOBOX        IDC_COMBO_MODE,168,180,110,100,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Description of Algorithm goes here.",IDC_DESC,168,200,110,30,SS_SUNKEN
+    GROUPBOX        "Mode",IDC_STATIC,10,240,142,32
+    CONTROL         "Encrypt",IDC_RADIO_ENCRYPT,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,37,252,42,12
+    CONTROL         "Decrypt",IDC_RADIO_DECRYPT,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,94,252,42,12
+    GROUPBOX        "Execute",IDC_STATIC,160,240,127,32
+    DEFPUSHBUTTON   "Go!",IDC_BUT_GO,199,250,50,14
+    GROUPBOX        "Progress",IDC_STATIC,10,275,277,55
+    LTEXT           "File:",IDC_STATIC,18,298,24,10,SS_CENTERIMAGE,WS_EX_RIGHT
+    LTEXT           "Total:",IDC_STATIC,18,313,24,10,SS_CENTERIMAGE,WS_EX_RIGHT
+    LTEXT           "Ready.",IDC_STATIC_FILE,48,284,230,9
+    CONTROL         "",IDC_PROG_FILE,"msctls_progress32",PBS_SMOOTH | WS_BORDER,48,298,200,10
+    CONTROL         "",IDC_PROG_TOTAL,"msctls_progress32",PBS_SMOOTH | WS_BORDER,48,313,200,10
+    LTEXT           "0 %",IDC_PERCENT_FILE,256,298,24,10,SS_CENTERIMAGE
+    LTEXT           "0 %",IDC_PERCENT_TOTAL,256,313,24,10,SS_CENTERIMAGE
+    LTEXT           "Select the files or directories you want to encrypt/decrypt below.\nIf a directory is selected then all files in it and its sub-directories are affected.",IDC_STATIC,52,7,235,33
+    CONTROL         IDB_BITMAP1,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | SS_SUNKEN,10,7,35,32
+    LTEXT           "0 password(s) have been hidden.\n(Options -> Hide Passwords)",IDC_STATIC_PWDMSG,18,180,126,30,SS_SUNKEN
+END
+
+IDD_PWD_DIALOG DIALOGEX 0, 0, 202, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,11,20,120,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDOK,144,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,23,50,14
+    LTEXT           "Enter Password        (Max 256 chars)",IDC_STATIC,12,6,119,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,4,0,1
+ PRODUCTVERSION 1,4,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Arijit De"
+            VALUE "FileDescription", "NeoCrypt"
+            VALUE "FileVersion", "1.4.0.1"
+            VALUE "InternalName", "NeoCrypt.exe"
+            VALUE "LegalCopyright", "Copyright (c) 2003-2024 Arijit De"
+            VALUE "OriginalFilename", "NeoCrypt.exe"
+            VALUE "ProductName", "NeoCrypt"
+            VALUE "ProductVersion", "1.4.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_NEOCRYPT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 330
+    END
+
+    IDD_PWD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\logo.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Hide Passwords",              ID_OPTIONS_HIDEPWD, CHECKED
+        MENUITEM "Show Confirmation",           ID_OPTIONS_SHOWCONFIRMATION, CHECKED
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About NeoCrypt...",          ID_HELP_ABOUTNEOCRYPT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_NEOCRYPT_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PWD_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About NeoCrypt..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\NeoCrypt.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

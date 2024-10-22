@@ -1,0 +1,53 @@
+        NeoCrypt Change Log
+        ~~~~~~~~~~~~~~~~~~~
+
+11 October 2024 (Release 1.4)
+    * Upgraded to C++ 17.
+    * Compiled additional 64-bit executable.
+    * Improved file processing and error handling.
+    * Improved support for large files (2GB+).
+    * Improved progress indicator for large files.
+    * Allowed passwords up to 256 characters.
+
+08 October 2024 (Release 1.3 Beta)
+    * Added ability to upload passwords from text or csv file.
+    * Added checks for duplicate passwords in list.
+    * Refreshed UI to support new features.
+    * Added message that encrypting with DES is no longer supported. Decryption is still supported.
+       This is due to Cryptlib changes.
+
+02 October 2024 (Release 1.2 Beta)
+    * Upgraded to Cryptlib 3.4.7.
+    * Enabled AES algorithm by default.
+    * Removed legacy/weak crypto algorithms.
+    * Added ability to enable or disable confirmation pop-up message.
+    * Upgraded to latest Windows API which brings improved file browser.
+    * Added drag and drop file and folder support.
+    * Tested on Windows 7, 10, and 11. Windows 9x and XP are no longer supported.
+
+25 June 2005 (Release 1.1a)
+    * Fixed "Installation path in registry" error in Shell
+       extension.
+    * Upgraded to Windows XP look & feel for newer operating
+       systems.
+        
+03 June 2003 (Release 1.1 Beta)
+
+    * Added a Windows Context Menu Shell Extension Handler which
+       sends files and folders to NeoCrypt through Windows Explorer.
+       (Sub-project NeocryptSX in the MSVC workspace)
+      
+    * The password list can be hidden and asterisks used in the
+       "Add Password" dialog by checking the Options->Hide Passwords
+       menu. The setting is saved in the registry.
+      
+    * Files/folders can be sent to NeoCrypt through Command-line.
+      
+    * Replaced all references to std::slist with std::list. Although
+       reduces efficiency, it is more consistent with the ANSI C++
+       STL. STLport 4.5.3 is no longer required to compile with
+       VC.NET (MSVC6 still requires it as it has many bugs it its STL
+       support).
+      
+    * Removed all references to "shlwapi.dll" to improve compatibility
+       with older versions of Windows.
